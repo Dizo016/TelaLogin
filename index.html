@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login</title>
+  <!--utilizei essa biblioteca de icones para pegar o olihnho e o icone da escola-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <form class="login">
+
+    <div class="logo" aria-label="Logotipo da Escola" role="img">
+      <i class="fa-solid fa-graduation-cap"></i>
+    </div>
+
+    <h1>Login</h1>
+
+    <label for="usuario">E-mail ou CPF</label>
+    <!-- Deixei assim para não ficar tão rigido a validação de CPF, aceita alguns formatos diferentes, mas com o
+     mesmo numero de digitos de um cpf.-->
+    <input type="text" id="usuario" placeholder="Digite seu e-mail ou CPF" required
+           pattern="([^\s@]+@[^\s@]+\.[^\s@]+)|(\d{3}\.?\d{3}\.?\d{3}-?\d{2})"
+           aria-describedby="erro-usuario">
+    <p class="erro" id="erro-usuario">Digite um e-mail ou CPF válido.</p>
+
+    <label for="senha">Senha</label>
+    <div class="campo-senha">
+      <input type="text" id="senha" class="senha" placeholder="Digite sua senha" required
+             aria-describedby="erro-senha">
+
+      <!-- Aqui usei o icone fa eye-->
+      <input type="checkbox" id="ver" class="ver" aria-label="Mostrar senha">
+      <label for="ver" class="olho">
+        <i class="fa-solid fa-eye"></i>
+      </label>
+      <p class="erro" id="erro-senha">Digite sua senha.</p>
+    </div>
+
+    <button type="submit">Entrar</button>
+
+    <a href="#">Receber link de acesso por e-mail</a>
+
+  </form>
+
+</body>
+</html>
