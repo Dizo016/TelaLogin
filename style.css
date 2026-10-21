@@ -1,0 +1,124 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e8e8e8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.login {
+  background-color: white;
+  width: 90%;
+  max-width: 350px;
+  padding: 25px;
+  border: 1px solid #999;
+  border-radius: 8px;
+}
+
+.logo {
+  text-align: center;
+  font-size: 50px;
+  color: #1a4fa0;
+}
+
+h1 {
+  text-align: center;
+  font-size: 22px;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+input[type="text"] {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #555;
+  border-radius: 4px;
+}
+
+input[type="text"]:user-invalid {
+  border-color: red;
+}
+
+.erro {
+  display: none;
+  color: #b00000;
+  font-size: 14px;
+  margin: 5px 0 0 0;
+}
+
+input:user-invalid ~ .erro {
+  display: block;
+}
+
+.campo-senha {
+  position: relative;
+}
+
+.senha {
+  padding-right: 40px;
+  -webkit-text-security: disc;
+  text-security: disc;
+}
+
+.ver:checked ~ .senha,
+.campo-senha:has(.ver:checked) .senha {
+  -webkit-text-security: none;
+  text-security: none;
+}
+
+.ver {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.olho {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  margin: 0;
+  color: #333;
+}
+
+button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  font-size: 18px;
+  color: white;
+  background-color: #1a4fa0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #123a78;
+}
+
+button:active {
+  background-color: #0a2550;
+}
+
+a {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+  color: #1a4fa0;
+  font-size: 15px;
+}
